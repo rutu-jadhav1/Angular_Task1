@@ -10,11 +10,12 @@ import { ImageComponent } from './component/Data-Binding/image-component/image-c
 import { ClickButtonComponent } from './component/Data-Binding/click-button-component/click-button-component';
 import { TwoWayBindingComponent } from './component/Data-Binding/two-way-binding-component/two-way-binding-component';
 import { NgIfComponent } from './component/StructuralDirectives/ng-if-component/ng-if-component';
+import { NgForComponent } from './component/StructuralDirectives/ng-for-component/ng-for-component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,VariableComponent, ObjectComponent,ArrayComponent, FunctionComponent, UserProfileComponent, 
-            ImageComponent, ClickButtonComponent, TwoWayBindingComponent, NgIfComponent],
+            ImageComponent, ClickButtonComponent, TwoWayBindingComponent, NgIfComponent, NgForComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

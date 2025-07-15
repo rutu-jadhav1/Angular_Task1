@@ -1,0 +1,22 @@
+<p>ng-for-component works!</p>
+<div class="col-3">
+    <p>Select City :</p>
+    <select class="city-select">
+        <option *ngFor="let items of cities">{{items}}</option>
+    </select>
+</div>
+<!--Take one TextBox, button and dropdown
+        on add btn click Entered City Should be added to dropdown option
+        after adding city - textbox Should be empty
+        Show count of Added Cities in P Tag. -->
+
+<div class="col-3">
+    <p>Add City :</p>
+    <input type="text" [(ngModel)]="newCity" placeholder="Enter city name"> &nbsp;&nbsp;&nbsp;
+    <button (click)="addCity()">Add City</button>
+    <p>Total Cities: {{citiesList.length}}</p>
+
+    <select class="cities-select">
+        <option *ngFor="let city of citiesList">{{city}}</option>
+    </select>
+</div>
