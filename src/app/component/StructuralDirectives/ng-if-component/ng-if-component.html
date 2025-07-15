@@ -1,0 +1,22 @@
+<p>ng-if-component works!</p>
+<h2>Select Gender</h2>
+<label>
+  <input type="radio" name="gender" [(ngModel)]="selectedGender" value="Male">
+  Male
+</label>
+
+<label>
+  <input type="radio" name="gender" [(ngModel)]="selectedGender" value="Female">
+  Female
+</label>
+<p *ngIf="selectedGender === 'Male'">You Have Selected Male</p>
+<p *ngIf="selectedGender === 'Female'">You Have Selected Female</p>
+
+<h2>Check Values</h2>
+<div>
+    <input type="text" [(ngModel)]="firstValue"  placeholder="Enter first value">
+    <input type="text" [(ngModel)]="secondValue" placeholder="Enter second value">
+</div>
+<div *ngIf="firstValue !== secondValue" class="valueCheck-div">
+    <p>The values are different.</p>
+</div>
