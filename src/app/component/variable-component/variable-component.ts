@@ -13,7 +13,7 @@ constructor() {
     this.displayAddress();
    }
 
-   // A
+   // A. create 3 variables to store firstName, middleName, lastName and Generate fullName by joining 3 variable and print full name in console.
   firstName:string = 'Rutuja';
   middleName:string = 'Kishor';
   lastName:string = 'Jadhav';
@@ -24,7 +24,7 @@ constructor() {
      console.log();
   }
 
-  // B Student Details
+// B. create variables to store student details like name, contactNo, FatherName, MotherName, Class,RollNo and print it in console.
   name: string = 'Rutuja Jadhav';
   contactNo: string = '1234567890';
   fatherName: string = 'Kishor Jadhav';
@@ -42,7 +42,7 @@ constructor() {
      console.log();
   }
  
-  // C
+  // C. create variable to store address, city ,state and pincode- and print address and city in console.
   address:string = 'Sangramnagar, Akluj';
   city:string = 'Akluj';
   state:string = 'Maharashtra';
