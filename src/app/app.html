@@ -1,20 +1,36 @@
-<app-variable-component></app-variable-component> 
-<hr/>
-<app-object-component></app-object-component>
-<hr/>
-<app-array-component></app-array-component>
-<hr/>
-<app-function-component></app-function-component>
-<hr/>
-<app-user-profile-component></app-user-profile-component>
-<hr/>
-<app-image-component></app-image-component>
-<hr/>
-<app-click-button-component></app-click-button-component>
-<hr/>
-<app-two-way-binding-component></app-two-way-binding-component>
-<hr/>
-<app-ng-if-component></app-ng-if-component>
-<hr/>
-<app-ng-for-component></app-ng-for-component>
-<hr/>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="'/app'">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/variable'">Variable</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/object'">object</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/ngFor'">NG-for</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/ngIf'">NG-if</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/function'">Function</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/userProfile'">UserProfile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

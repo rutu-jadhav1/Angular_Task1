@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-object-component',
-  imports: [],
+ imports: [],
+  standalone: true,
   templateUrl: './object-component.html',
   styleUrl: './object-component.css'
 })
