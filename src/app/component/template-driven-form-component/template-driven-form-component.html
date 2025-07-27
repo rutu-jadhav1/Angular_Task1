@@ -1,1 +1,81 @@
 <p>template-driven-form-component works!</p>
+<form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)" class="form-container mx-auto p-2">
+
+    <h2 class="text-center">Template Driven Form</h2>
+    <br/>
+
+    <label for="fullName" class="ms-2">Full Name : </label>
+        <input #firstName="ngModel" type="text" name="firstName"  placeholder="firstName" ngModel required class="ms-2">
+        <span class="text-danger" *ngIf="firstName.invalid && firstName.touched">FirstName is required</span>
+
+        <input type="text" name="middleName"  placeholder="middleName"  class="ms-2">
+
+        <input #lastName="ngModel" type="text" name="lastName"  placeholder="lastName" ngModel required class="ms-2">
+        <span class="text-danger" *ngIf="lastName.invalid && lastName.touched">LastName is required</span>
+    <br/><br/>
+
+    <label for="userName" class="ms-2">User Name : </label>
+    <input #userName="ngModel" type="text" name="userName"  placeholder="Enter your username" ngModel required class="ms-2 p-1">
+    <span class="text-danger" *ngIf="userName.invalid && userName.touched">Name is required</span>
+ 
+
+    <label for="password" class="ms-5">Password : </label>
+    <input #password="ngModel" type="password" name="password"  placeholder="Enter your password" ngModel required
+     minlength="6" maxlength="10" class="ms-3 p-1">
+    <span class="text-danger" *ngIf="password.invalid && password.touched">Please enter valid Password</span>
+    <br/><br/>
+  
+    <label for="email" class="ms-2">Email : </label>
+    <input #email="ngModel" type="email" name="email"  placeholder="Enter your Email" ngModel required email class="ms-5 p-1">
+    <span class="text-danger" *ngIf="email.invalid && email.touched">Please enter valid email</span>
+   
+    
+    <label for="address" class="ms-5">Address : </label>
+    <input #address="ngModel" type="text" name="address"  placeholder="Enter your address" ngModel required
+     pattern="^[a-zA-Z0-9\s]+$"  class="ms-3 p-1">
+    <span class="text-danger" *ngIf="address.invalid && address.touched">Please enter valid address</span>
+    <br/><br/>
+    
+
+   <label class="ms-2">Gender:</label>
+
+    <input type="radio" name="gender" value="male" ngModel required #gender="ngModel" class="ms-2" />
+    <label class="me-2">Male</label>
+
+    <input type="radio" name="gender" value="female" ngModel required class="ms-2" />
+    <label>Female</label>
+
+    <span class="text-danger" *ngIf="gender?.invalid && gender?.touched">Please select gender</span>
+    <br/><br/>
+
+    
+
+    <button [disabled]="userForm.invalid" class="mx-auto btn-grad">Add user</button>
+    <br/><br/>
+</form>
+
+<table border="1" class="mx-3" style="border-collapse: collapse; text-align: left;">
+    <tr>
+        <th>Full Name : </th>
+        <td>{{ userDetails?.firstName }} {{ userDetails?.middleName }} {{ userDetails?.lastName }}</td>
+  <tr>
+    <th>User Name : </th>
+    <td>{{ userDetails?.userName }}</td>
+  </tr>
+  <tr>
+    <th>Password : </th>
+    <td>{{ userDetails?.password }}</td>
+  </tr>
+  <tr>
+    <th>Gender : </th>
+    <td>{{ userDetails?.gender }}</td>
+  </tr>
+  <tr>
+    <th>Email : </th>
+    <td>{{ userDetails?.email }}</td>
+  </tr>
+  <tr>
+    <th>Address : </th>
+    <td>{{ userDetails?.address }}</td>
+  </tr>
+</table>
