@@ -1,0 +1,35 @@
+<p>reactive-form-component works!</p>
+<form action="" [formGroup]="profileForm" (ngSubmit)="submitData()">
+    <input type="text" placeholder="Enter FullName"
+     formControlName="fullName" />
+     <span class="text-danger" *ngIf="fullName?.hasError('required')">FullName required...</span>
+     <span class="text-danger" *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)">Please enter valid FullName...</span>
+     <br/><br/>
+     <input type="text" placeholder="Enter UserName"
+     formControlName="userName"/>
+     <span class="text-danger" *ngIf="userName?.hasError('required')">UserName required...</span>
+     <span class="text-danger" *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">Please enter valid UserName...</span>
+    <br/><br/>
+    <input type="email"  placeholder="Enter Email"
+    formControlName="email" />
+    <span class="text-danger" *ngIf="email?.hasError('required')">Email required...</span>
+     <span class="text-danger" *ngIf="email?.invalid && (email?.dirty || email?.touched)">Please enter valid Email...</span>
+     <br/><br/>
+      <input type="number" placeholder="Enter Mobile Number"
+     formControlName="phone"/>
+     <span class="text-danger" *ngIf="phone?.hasError('required')">Mobile Number required...</span>
+     <span class="text-danger" *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">Please enter valid Mobile Number...</span>
+    <br/><br/>
+    <input type="password" placeholder="Enter Password here"
+      formControlName="password"/>
+      <span class="text-danger" *ngIf="password?.hasError('required')">Password required...</span>
+     <span class="text-danger" *ngIf="password?.invalid && (password?.dirty || password?.touched)">Please enter valid Password...</span>
+    <br/><br/>
+     <input type="password" placeholder="Confirm Password"
+      formControlName="confirmPassword"/>
+      <span class="text-danger" *ngIf="confirmPassword?.hasError('required')">FullName required...</span>
+     <span class="text-danger" *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)">Please enter similar Password...</span>
+    <br/><br/>
+    <button >Login</button> 
+    
+</form>

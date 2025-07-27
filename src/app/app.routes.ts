@@ -6,6 +6,8 @@ import { NgIfComponent } from './component/StructuralDirectives/ng-if-component/
 import { FunctionComponent } from './component/function-component/function-component';
 import { UserProfileComponent } from './component/Data-Binding/user-profile-component/user-profile-component';
 import { App } from './app';
+import { ReactiveFormComponent } from './component/reactive-form-component/reactive-form-component';
+import { TemplateDrivenFormComponent } from './component/template-driven-form-component/template-driven-form-component';
 
 export const routes: Routes = [
      {
@@ -40,6 +42,14 @@ export const routes: Routes = [
     {
         path:'userProfile',
         component: UserProfileComponent
+    },
+    {
+        path: 'reactiveForm',
+        component: ReactiveFormComponent
+    },
+    {
+        path: 'templateDrivenForm',
+        component: TemplateDrivenFormComponent
     }
 
 ];
